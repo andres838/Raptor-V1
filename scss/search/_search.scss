@@ -1,0 +1,62 @@
+.homeSearch {
+
+    .contentSearch {
+        position: relative;
+        top: 40%; 
+        transition: top 1s;       
+    }
+
+    .bar .button.button-clear, .bar button.button-clear {
+        color: white;
+    }
+
+    button {        
+        display: none;
+    }
+
+    .activeSearch {
+        top: 0;
+
+        button {
+            display: block;
+        }
+
+        .logoHome {
+            width: 0%;
+        }
+
+        .item-input-wrapper {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .item-input-inset {
+            background: transparent;
+        } 
+
+    }
+
+    .bar.item-input-inset .item-input-wrapper input {
+        color: white;
+    }
+
+    .logoHome {   
+        width: 100%;   
+        transition: width 1s;  
+        display: block;
+        margin: 0 auto;
+    }
+
+    .item-input-wrapper {
+        background: transparent;
+    }
+
+    .searchContent{
+        background-color: black;
+    }
+
+
+    ion-content {
+        background-color: #fff;;
+        transition: background-color 1s linear;
+    }
+}

@@ -1,0 +1,15 @@
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+coverage
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
+ionic.app.css
+main.css
+.bowerrc

@@ -1,0 +1,16 @@
+<ion-view class="homeSearch">
+	<ion-content padding="true" class="has-header" ng-class="{'searchContent' : home.show == true}">
+		<div class="contentSearch" ng-class="{'activeSearch' : home.show == true}">		
+			<img src="img/raptor.png" alt="logo" class="logoHome" />
+			<div class="bar bar-header item-input-inset">
+				<label class="item-input-wrapper" ng-click="home.show = true">
+					<i class="icon ion-ios-search placeholder-icon"></i>
+					<input type="search" placeholder="Search">
+				</label>
+				<button class="button button-clear" ng-click="home.show = false">
+					Cancel
+				</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
