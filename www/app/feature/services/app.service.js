@@ -10,24 +10,23 @@
 		vm.search = search;
 
 
-		function search(){
+		function search(){	
 
 
-			var CreditCard = $resource('http://23.105.70.100/Raptor/post/track/search/:cardId',
-				{userId:123, cardId:'@id'}, {
-				charge: {method:'POST', params:{query: 'daft punk'}}
+			return  $resource('http://23.105.70.100/Raptor/post/track/search/:id',
+				{
+					 id:'@id'
+				}, 
+				{
+					save: {
+						method:'POST',
+						headers: {
+							'Content-Type': 'application/x-www-form-urlencoded'
+						},
+						
+						isArray: false
+				}
 			});
-			return CreditCard;
-			/*return $resource("http://23.105.70.100/Raptor/post/track/search/:id",
-            {
-                id:"@_id"
-            },
-            {
-                'update': 
-                { 
-                    method:'PUT' 
-                }
-            });*/
 		}
 
 	}
