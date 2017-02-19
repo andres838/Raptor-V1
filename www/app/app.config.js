@@ -15,14 +15,13 @@ function run($rootScope, $ionicPlatform) {
         Function.prototype.bind = bind;
     }*/
     $ionicPlatform.ready(function () {
-        if (window.cordova && window.cordova.plugins.Keyboard) {
+       /* if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             cordova.plugins.Keyboard.disableScroll(true);
         }
         if (window.StatusBar) {
             StatusBar.styleDefault();
-        }
-
+        }*/
     });
 }
 })();

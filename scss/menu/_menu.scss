@@ -4,10 +4,11 @@ ion-side-menu {
 }
 
 .item {
-   background: transparent;
+   background-color: transparent;
    color: white;
    border: 0;
 }
+
 
 .item-complex .item-content, .item-radio .item-content{
     background-color: transparent;   
@@ -19,8 +20,26 @@ ion-side-menu {
     height: 100%;
     /* background: red; */
     background-size: cover;
-    background-image: url(../../img/tumblr_nm71f8AQf21s49veho1_500.jpg);
+    background-image: url(../img/tumblr_nmaqmneyzH1so8z5lo1_400.gif);
     position: absolute;
     background-position-x: -7rem;
     opacity: 1;
+    top: 0;
 }
+
+.logoMenu {
+    width: 100%;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 1rem;
+
+
+    img {
+        width: 100%;
+        opacity: .5;
+    }
+}
+
+

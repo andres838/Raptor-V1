@@ -1,6 +1,6 @@
 <ion-view class="homeSearch">
 	<ion-content padding="true" class="has-header" ng-class="{'searchContent' : home.show == true}">
-		<div class="contentSearch" ng-class="{'activeSearch' : home.show == true}">		
+		<div class="contentSearch" ng-class="{'activeSearch' : home.show}">		
 			<img src="img/raptor.png" alt="logo" class="logoHome" />
 			<div class="bar bar-header item-input-inset">
 				<label class="item-input-wrapper" ng-click="home.show = true">
@@ -12,7 +12,12 @@
 				</button>
 			</div>
 		</div>
-		<div class="list" ng-if="home.data">
+		<div class="list" ng-if="home.show && home.data">
+			<!--<div class="listaData item item-thumbnail-left">
+				<img ng-src="http://cdn-images.deezer.com/images/cover/8a5476698c52baefa7263eeae4b1ab28/250x250-000000-80-0-0.jpg" src="http://cdn-images.deezer.com/images/cover/8a5476698c52baefa7263eeae4b1ab28/250x250-000000-80-0-0.jpg">
+				<h2 class="ng-binding">UMI Says</h2>
+				<h2 ng-click="home.playAudio()">play</h2>
+			</div>-->
 
 			<div class="listaData item item-thumbnail-left"   ng-repeat="data in home.data">
 				<img ng-src="{{data.album.cover_medium}}">

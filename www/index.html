@@ -11,18 +11,14 @@
   <!-- endbower -->
   <!-- inject:css -->
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/menu/menu.css">
   <!-- endinject -->
   <!-- endbuild -->
- 
+  
 </head>
 
 <body ng-app="starter"  animation="slide-left-right-ios7">
   <div>
     <div>
-        <ion-nav-bar class="bar-stable">
-            <ion-nav-back-button></ion-nav-back-button>
-        </ion-nav-bar>
         <ion-nav-view></ion-nav-view>
     </div>
 </div>
@@ -41,14 +37,12 @@
 
   <!-- build:js app/pragma.min.js -->
   <!-- inject:js -->
+  <script src="app/feature/menu/menu.module.js"></script>
+  <script src="app/feature/menu/menu.controller.js"></script>
   <script src="app/feature/swipe/swipe.module.js"></script>
   <script src="app/feature/swipe/swipe.controller.js"></script>
   <script src="app/app.module.js"></script>
   <script src="app/feature/services/app.service.js"></script>
-  <script src="app/feature/reproductor/home.module.js"></script>
-  <script src="app/feature/reproductor/home.controller.js"></script>
-  <script src="app/feature/menu/menu.module.js"></script>
-  <script src="app/feature/menu/menu.controller.js"></script>
   <script src="app/feature/home/home.module.js"></script>
   <script src="app/feature/home/home.controller.js"></script>
   <script src="app/app.routes.js"></script>
