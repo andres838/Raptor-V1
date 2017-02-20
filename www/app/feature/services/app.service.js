@@ -7,7 +7,17 @@
         function appService($resource,$http){
             var self = this;
             self.search = search;
-            self.suggested = suggested
+            self.suggested = suggested;
+            self.insertUser = insertUser;
+
+             function insertUser(data){	
+               return $http({
+                    method: "POST",
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    url: 'http://23.105.70.100/Raptor/post/user/insertUser',
+                    data: data
+                })
+            }
 
             function search(data){	
                return $http({
@@ -16,19 +26,6 @@
                     url: 'http://23.105.70.100/Raptor/post/track/search/',
                     data: data
                 })
-               /* return  $resource('http://23.105.70.100/Raptor/post/track/search/:id',
-                    {
-                        id:'@id'
-                    }, 
-                    {
-                        save: {
-                            method:'POST',
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded'
-                            },                            
-                            isArray: false
-                    }
-                });*/
             }
 
             function suggested(){	

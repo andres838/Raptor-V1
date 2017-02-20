@@ -19,6 +19,11 @@
             document.addEventListener("deviceready", onDeviceReady, false);
             function onDeviceReady() {
                 vm.id = device.uuid;
+                var data = 'id=' + vm.id;
+                appService.insertUser(data).then(function(response){
+                    console.log(response);
+                });
+                
             }
 
 
@@ -27,7 +32,6 @@
             });
 
             function search(){
-
                 var data = 'query='+vm.dataSearch;
                 appService.search(data).then(function(response){
                     vm.data = response.data.data.data; 

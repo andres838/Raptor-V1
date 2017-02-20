@@ -10,6 +10,13 @@
 
         $stateProvider
 
+            .state('reproductor', {
+                url: "/reproductor",
+                abstract: false,
+                templateUrl: "app/feature/reproductor/reproductor.view.html",
+                controller: "reproductorController as reproductor",
+            })            
+
             .state('app', {
                 url: "/app",
                 abstract: true,
@@ -26,6 +33,7 @@
                     }
                 }  
             })
+
             .state('swipe', {
                 url: "/swipe",
                 templateUrl: "app/feature/swipe/swipe.view.html",

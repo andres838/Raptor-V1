@@ -8,7 +8,8 @@ angular
             //module feature
             'homeModule',
             'swipeModule',
-            'menuModule'
+            'menuModule',
+            'reproductorModule'
             
             //module components
             
