@@ -1,4 +1,4 @@
-<ion-view class="homeSearch">
+<div class="homeSearch">
 	<ion-content padding="true" class="has-header" ng-class="{'searchContent' : home.show == true}">
 		<div class="contentSearch" ng-class="{'activeSearch' : home.show}">		
 			<img src="img/raptor.png" alt="logo" class="logoHome" />
@@ -21,9 +21,16 @@
 
 			<div class="listaData item item-thumbnail-left"   ng-repeat="data in home.data">
 				<img ng-src="{{data.album.cover_medium}}">
-				<h2>{{data.title}}</h2>			
+				<h2>{{data.title}}</h2>		
+				<div class="contentControl">
+					<button ng-click="reproductor.playerFull(data.id)">
+						<span>
+							&#8227;
+						</span>						
+					</button>
+				</div>	
 			</div>
 
 		</div>
 	</ion-content>
-</ion-view>
+</div>

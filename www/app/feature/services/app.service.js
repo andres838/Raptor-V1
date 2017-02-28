@@ -6,15 +6,28 @@
         appService.$inject = ['$resource','$http'];	
         function appService($resource,$http){
             var self = this;
+            self.host = 'http://23.105.70.100';
+
             self.search = search;
             self.suggested = suggested;
             self.insertUser = insertUser;
+            self.download = download;
 
-             function insertUser(data){	
+            function download(data){	
                return $http({
                     method: "POST",
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    url: 'http://23.105.70.100/Raptor/post/user/insertUser',
+                    url: self.host + '/Raptor/post/track/download',
+                    data: data
+                })
+            }
+
+             
+            function insertUser(data){	
+               return $http({
+                    method: "POST",
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    url: self.host + '/Raptor/post/user/insertUser',
                     data: data
                 })
             }
@@ -23,13 +36,13 @@
                return $http({
                     method: "POST",
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    url: 'http://23.105.70.100/Raptor/post/track/search/',
+                    url: self.host + '/Raptor/post/track/search/',
                     data: data
                 })
             }
 
             function suggested(){	
-                return  $http.get('http://23.105.70.100/Raptor/post/track/getSuggested/');
+                return  $http.get(self.host + '/Raptor/post/track/getSuggested/');
             }
 
       /*  self = {

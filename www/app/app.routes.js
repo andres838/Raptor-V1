@@ -10,20 +10,25 @@
 
         $stateProvider
 
-            .state('reproductor', {
-                url: "/reproductor",
-                abstract: false,
-                templateUrl: "app/feature/reproductor/reproductor.view.html",
-                controller: "reproductorController as reproductor",
-            })            
-
             .state('app', {
                 url: "/app",
                 abstract: true,
                 templateUrl: "app/feature/menu/menu.view.html",
                 controller: "menuController as menu",
             })
-            
+
+            /*.state('app.reproductor', {
+                url: "/reproductor",
+                abstract: true,
+                views: {
+                    'menuContent' :{
+                        templateUrl: "app/feature/reproductor/reproductor.view.html",
+                        controller: "reproductorController as reproductor"
+                    }
+                }  
+                
+            })                        
+            */
             .state('app.home', {
                 url: "/home",
                 views: {

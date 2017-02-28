@@ -6,10 +6,10 @@
         .controller('homeController', homeController);
 
             //Inyeccion de dependencias
-            homeController.$inject = ['$stateParams','$http', '$state', 'appService', '$timeout'];
+            homeController.$inject = ['$stateParams', '$state', 'appService', '$timeout'];
 
-            function homeController($stateParams, $http, $state, appService,timeout ) {
-
+            function homeController($stateParams, $state, appService,timeout ) {
+                
             var vm = this;    
             vm.search = search;
             vm.dataSearch;
@@ -26,7 +26,6 @@
                 
             }
 
-
             appService.suggested().then(function(response){
                 vm.data = response.data.data.data; 
             });
@@ -36,7 +35,10 @@
                 appService.search(data).then(function(response){
                     vm.data = response.data.data.data; 
                 });
-            }                                  
+            }     
+
+
+                                      
     }
     
 })();

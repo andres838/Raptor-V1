@@ -70,4 +70,30 @@
     .list {
         
     }
+
+    .contentControl {
+        
+        button {
+            border: 0;
+            background: rgba(255,255,255, .1);
+            color: white;
+            font-size: 3rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            height: 2rem;
+            margin: .5rem;
+            opacity: .9;
+            position: relative;
+
+            span {
+                position: absolute;
+                top: 2px;
+                left: 9px;
+            }
+        }
+
+    }
 }

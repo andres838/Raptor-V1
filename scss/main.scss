@@ -30,6 +30,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "general/variables";
 
 /* inject:imports */
+@import "360/_360player-visualization.scss";
+@import "360/_360player.scss";
 @import "menu/_menu.scss";
+@import "reproductor/_reproductor.scss";
 @import "search/_search.scss";
 /* endinject */

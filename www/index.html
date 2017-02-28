@@ -6,6 +6,7 @@
   <title></title>
 
   <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
   <!-- build:css css/pragma.min.css -->
   <!-- bower:css -->
   <!-- endbower -->
@@ -13,15 +14,14 @@
   <link rel="stylesheet" href="css/main.css">
   <!-- endinject -->
   <!-- endbuild -->
-  
+ 
 </head>
 
-<body ng-app="starter"  animation="slide-left-right-ios7">
-  <div>
-    <div>
-        <ion-nav-view></ion-nav-view>
-    </div>
-</div>
+<body ng-app="starter" animation="slide-left-right-ios7">
+  <div ng-controller="reproductorCtrl as reproductor"  >
+    <div class="contentReproductor" ng-include="'app/feature/reproductor/reproductor.view.html'"></div>
+    <ion-nav-view></ion-nav-view>
+  </div>   
 
   <!-- build:js app/vendor.min.js -->
   <!-- ionic/angularjs js -->
@@ -29,6 +29,11 @@
   <!-- bower:js -->
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-resource/angular-resource.js"></script>
+  <script src="lib/rgbaster/rgbaster.js"></script>
+  <script src="lib/angular-soundmanager2/dist/angular-soundmanager2.js"></script>
+  <script src="lib/SoundManager2/script/soundmanager2.js"></script>
+  <script src="lib/berniecode-animator/index.js"></script>
+  <script src="lib/360Player/index.js"></script>  
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -39,16 +44,17 @@
   <!-- inject:js -->
   <script src="app/feature/reproductor/menu/menu.module.js"></script>
   <script src="app/feature/reproductor/menu/menu.controller.js"></script>
-  <script src="app/feature/reproductor/reproductor.module.js"></script>
-  <script src="app/feature/reproductor/reproductor.controller.js"></script>
-  <script src="app/feature/swipe/swipe.module.js"></script>
-  <script src="app/feature/swipe/swipe.controller.js"></script>
-  <script src="app/app.module.js"></script>
-  <script src="app/feature/services/app.service.js"></script>
   <script src="app/feature/menu/menu.module.js"></script>
   <script src="app/feature/menu/menu.controller.js"></script>
   <script src="app/feature/home/home.module.js"></script>
   <script src="app/feature/home/home.controller.js"></script>
+  <script src="app/feature/swipe/swipe.module.js"></script>
+  <script src="app/feature/swipe/swipe.controller.js"></script>
+  <script src="app/app.module.js"></script>
+  <script src="app/feature/services/app.service.js"></script>
+  <script src="app/feature/reproductor/reproductor.module.js"></script>
+  <script src="app/feature/reproductor/reproductor.controller.js"></script>
+  <script src="app/feature/factory/app.play.js"></script>
   <script src="app/app.routes.js"></script>
   <script src="app/app.config.js"></script>
   <!-- endinject -->
