@@ -27,13 +27,10 @@
   <!-- ionic/angularjs js -->
   <script src="lib/ionic/js/ionic.bundle.js"></script>
   <!-- bower:js -->
+  <script src="lib/jquery/dist/jquery.js"></script>
   <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular-resource/angular-resource.js"></script>
-  <script src="lib/rgbaster/rgbaster.js"></script>
-  <script src="lib/angular-soundmanager2/dist/angular-soundmanager2.js"></script>
-  <script src="lib/SoundManager2/script/soundmanager2.js"></script>
-  <script src="lib/berniecode-animator/index.js"></script>
-  <script src="lib/360Player/index.js"></script>  
+  <script src="lib/rgbaster/rgbaster.js"></script>  
+  <script src="lib/angular-mocks/angular-mocks.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -42,19 +39,37 @@
 
   <!-- build:js app/pragma.min.js -->
   <!-- inject:js -->
-  <script src="app/feature/reproductor/menu/menu.module.js"></script>
-  <script src="app/feature/reproductor/menu/menu.controller.js"></script>
-  <script src="app/feature/menu/menu.module.js"></script>
-  <script src="app/feature/menu/menu.controller.js"></script>
-  <script src="app/feature/home/home.module.js"></script>
-  <script src="app/feature/home/home.controller.js"></script>
+  <script src="app/feature/vendor/three/three.js"></script>
+  <script src="app/feature/vendor/three/CanvasRenderer.js"></script>
+  <script src="app/feature/vendor/Modernizr/modernizr.custom.39580.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/app.module.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-vinyl.directive.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-three-renderer.service.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-stereo.directive.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-music-control.directive.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-music-control-button.service.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-math-util.service.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-icosahedron.directive.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-helper.service.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-enable-audio-context.service.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-detector.service.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-canvas-util.service.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-audio.service.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/ks-animation.service.js"></script>
+  <script src="app/feature/vendor/angular-ks-stereo/app.constants.js"></script>
   <script src="app/feature/swipe/swipe.module.js"></script>
   <script src="app/feature/swipe/swipe.controller.js"></script>
   <script src="app/app.module.js"></script>
   <script src="app/feature/services/app.service.js"></script>
   <script src="app/feature/reproductor/reproductor.module.js"></script>
+  <script src="app/feature/reproductor/reproductor.service.js"></script>
   <script src="app/feature/reproductor/reproductor.controller.js"></script>
-  <script src="app/feature/factory/app.play.js"></script>
+  <script src="app/feature/reproductor/reproductor.constant.js"></script>
+  <script src="app/feature/reproductor/reproductor.config.js"></script>
+  <script src="app/feature/menu/menu.module.js"></script>
+  <script src="app/feature/menu/menu.controller.js"></script>
+  <script src="app/feature/home/home.module.js"></script>
+  <script src="app/feature/home/home.controller.js"></script>
   <script src="app/app.routes.js"></script>
   <script src="app/app.config.js"></script>
   <!-- endinject -->

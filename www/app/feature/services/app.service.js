@@ -3,10 +3,10 @@
 	angular
 		.module('starter')
 		.service('appService',appService);
-        appService.$inject = ['$resource','$http'];	
-        function appService($resource,$http){
+        appService.$inject = ['$http'];	
+        function appService($http){
             var self = this;
-            self.host = 'http://23.105.70.100';
+            self.host = 'https://raptor-speakerblack.c9users.io';
 
             self.search = search;
             self.suggested = suggested;
@@ -17,7 +17,7 @@
                return $http({
                     method: "POST",
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    url: self.host + '/Raptor/post/track/download',
+                    url: self.host + '/server/post/track/download',
                     data: data
                 })
             }
@@ -27,7 +27,7 @@
                return $http({
                     method: "POST",
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    url: self.host + '/Raptor/post/user/insertUser',
+                    url: self.host + '/server/post/user/insertUser',
                     data: data
                 })
             }
@@ -36,13 +36,13 @@
                return $http({
                     method: "POST",
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    url: self.host + '/Raptor/post/track/search/',
+                    url: self.host + '/server/post/track/search/',
                     data: data
                 })
             }
 
             function suggested(){	
-                return  $http.get(self.host + '/Raptor/post/track/getSuggested/');
+                return  $http.get(self.host + '/server/post/track/getSuggested/');
             }
 
       /*  self = {

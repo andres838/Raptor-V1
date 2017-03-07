@@ -14,6 +14,7 @@ var wiredep = require('wiredep').stream;
 var angularFilesort = require('gulp-angular-filesort');
 var watch = require('gulp-watch');
 var autoprefixer = require('gulp-autoprefixer');
+var server = require('gulp-server-livereload');
 
 /**
  * Global paths
@@ -87,11 +88,16 @@ gulp.task('wiredep', function () {
 gulp.task('inject', function () {
   gulp.src('./www/index.html')
     .pipe(inject(
-      gulp.src(['./www/app/**/*.js']).pipe(angularFilesort()), { relative: true }
+      gulp.src(['./www/app/**/**/*.js']).pipe(angularFilesort()), {relative: true}
     ))
     .pipe(inject(
         gulp.src(['./www/css/**/*.css'], { read: false }), { relative: true }
     ))
+    .pipe(server({
+      livereload: true,
+      directoryListing: true,
+      open: true
+    }))
     .pipe(gulp.dest('./www'));
 });
 

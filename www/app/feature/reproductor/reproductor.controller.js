@@ -6,16 +6,29 @@
         .controller('reproductorCtrl', reproductorCtrl);
 
     //Inyeccion de dependencias
-    reproductorCtrl.$inject = ['$stateParams', '$state', 'appService'];
+    reproductorCtrl.$inject = ['$stateParams', '$state', 'appService', 'ksAudio', 'Modernizr','reproductorService','Url'];
 
-    function reproductorCtrl($stateParams, $state, appService) {
+    function reproductorCtrl($stateParams, $state, appService, ksAudio, Modernizr, reproductorService,Url) {
 
         var vm = this;
         vm.playerFull = playerFull;
         vm.imgCover;
         vm.urlAudio;
+        vm.repShow = false;
 
+        reproductorService;
 
+        
+
+        ksAudio.defaults.src = 'ss';
+        ksAudio.defaults.enableAudio = Modernizr.audio;
+        ksAudio.defaults.enableAudioContext = (! Modernizr.touch) && Modernizr.webaudio;
+        ksAudio.defaults.autoplay = false;
+
+        console.log(ksAudio.play());
+
+        
+        /*console.log(Url.ruta = 'http://cdn-preview-1.deezer.com/stream/110ff60b8767dedaaadbd37ffcd7a752-3.mp3');*/
         //datos control Media
         vm.data_controls = {
             track: '',
@@ -39,17 +52,6 @@
                 
             });
         }   
-
-        soundManager.setup({
-            url: '/path/to/swf-files/',
-            flashVersion: 9, // optional: shiny features (default = 8)
-            // optional: ignore Flash where possible, use 100% HTML5 mode
-            // preferFlash: false,
-            onready: function() {// Ready to use; soundManager.createSound() etc. can now be called.
-            }
-        });
-
-
         
 
         vm.eventsBkg = {

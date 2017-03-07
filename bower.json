@@ -2,12 +2,13 @@
   "name": "bcr-safi",
   "version": "1.0.0",
   "dependencies": {
-    "angular-resource": "^1.6.2",
+    "angular": "~1.2.23",
     "rgbaster": "^1.0.0",
-    "angular-soundmanager2": "^0.5.6",
-    "SoundManager2": "soundmanager2#*",
-    "360Player": "https://github.com/scottschiller/SoundManager2/tree/master/demo/360-player/script/360player.js",
-    "berniecode-animator": "https://github.com/scottschiller/SoundManager2/tree/master/demo/360-player/script/berniecode-animator.js"
+    "angular-ks-stereo": "0.1.2",
+    "jquery": "^3.1.1",
+    "angular-mocks": "~1.2.22"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    
+  }
 }

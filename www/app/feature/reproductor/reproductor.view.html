@@ -1,17 +1,47 @@
-<section class="">
 
+<section class="" >
 
-  <div class="logoMenu">
-    <img ng-src="{{reproductor.imgCover}}" alt="cover">
-  </div>
+ <div data-ks-stereo></div>
 
-  <div class="contentAudio">
-    <audio id="audioReproductor" ng-src="{{reproductor.urlAudio}}"></audio>
-  </div>
+  <script type="text/ng-template" id="/app/components/ks-music-control.html">
+    <button data-ng-click="toggle()" data-ng-disabled="'loading' === getStatus() || 'error' === getStatus()" class="ks-music-control">
 
-  <div class="ui360">
-    <a href="http://cdn-preview-1.deezer.com/stream/110ff60b8767dedaaadbd37ffcd7a752-3.mp3">play "an.mp3"</a>
-  </div>
+      <div data-ng-switch="getStatus()">
+        <div data-ng-switch-when="loading">
+          <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div data-ng-switch-when="paused">
+          <svg width="22" height="22">
+            <polygon points="0, 0 22, 11 0, 22"></polygon>
+          </svg>
+        </div>
+        <div data-ng-switch-when="playing">
+          <div class="pause">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div data-ng-switch-when="error">
+          <div class="error">Error</div>
+        </div>
+      </div>
+
+    </button>
+  </script>
+
+  <script type="text/ng-template" id="/app/components/ks-stereo.html">
+    <div class="ks-stereo">
+      <div data-ks-icosahedron data-scale="vm.stereo.scale" data-color="vm.stereo.color"></div>
+      <div data-ks-vinyl data-scale="vm.stereo.scale" data-color="vm.stereo.color" data-progress="vm.stereo.progress"></div>
+      <div class="ks-control-icosahedron" data-ks-music-control></div>
+    </div>
+  </script>
   
 </section>  
 
